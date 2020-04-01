@@ -1,0 +1,103 @@
+---
+title: "Bundesliga Simulation anhand von Monte Carlo"
+author: "Malte Schmielewski"
+date: "4/1/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Simulation der Bundesliga ab dem 26. Spieltag
+
+Dieses Sheet sammelt und visualisiert die Ergebnisse der Simulation der Bundesliga.
+
+### Methodik
+
+asdasd
+asdasdsda
+
+
+
+### Titel Rennen Visualisiert
+![](gganim.gif)
+
+
+### Ligatebellen Matrix
+
+```{r cars, include=FALSE}
+library("shiny")
+library("dplyr")
+library("data.table") 
+library("DT")
+library("skellam")
+library('httr')
+library("rpart")
+library("caret")
+library("lubridate")
+library("DBI")
+library("goalanalytics")
+library("formattable")
+
+End_results_dummy<-get_table("total_result")
+
+#table<-filter(End_results_dummy,Team %in% c("Bayern Munich","RB Leipzig","Dortmund")
+End_results_dummy %>% group_by(Position)
+
+table_matrix<-matrix(0,18,19)
+colnames(table_matrix)<-c(0,seq(1:18))
+table_matrix<-as.data.frame(table_matrix)
+
+table_matrix$`0`<-unique(End_results_dummy$Team)
+table_matrix<-rename(table_matrix,Team=`0`)
+
+rel_table<-filter(End_results_dummy,Team==table_matrix$Team[1]) 
+
+rel_table_dummy<-rel_table[0,]
+
+for(e in 1:nrow(table_matrix)){
+  
+  rel_table<-filter(End_results_dummy,Team==table_matrix$Team[e]) 
+  rel_table_dummy<-bind_rows(rel_table_dummy,rel_table)
+}
+
+for(i in 1:nrow(table_matrix)){
+  
+  for(j in 1:length(colnames(table_matrix))-1){
+    if(nrow(filter(rel_table_dummy,Team==table_matrix$Team[i],Position==as.numeric(colnames(table_matrix)[j+1])))==0){next}  
+    position<-filter(rel_table_dummy,Team==table_matrix$Team[i],Position==as.numeric(colnames(table_matrix)[j+1])) %>% nrow() %>% as.numeric()
+    all<-filter(rel_table_dummy,Team==table_matrix$Team[i]) %>% nrow() %>% as.numeric()
+    table_matrix[i,j+1]<-position/all
+    
+  }}
+
+table_matrix[,2:19]=table_matrix[,2:19]*100
+
+table_matrix <- table_matrix %>% mutate_if(is.numeric, round, 2) %>% arrange(desc(`1`),desc(`2`),desc(`3`),desc(`4`),desc(`5`),desc(`6`),desc(`7`),desc(`8`),desc(`9`),desc(`10`),desc(`11`),desc(`12`),desc(`13`),desc(`14`),desc(`15`),desc(`16`),desc(`17`))
+
+
+table<-formattable(table_matrix, align = c("l","l",rep("r", NCOL(table_matrix) - 1)), list(
+  `Team` = 
+    formatter("span", style = ~ style(font.weight = "bold")),
+  area(col = 2:7) ~ color_tile("white", "green"),
+  area(col = 8:16) ~ color_tile("white", "darkgrey"),
+  area(col = 17) ~ color_tile("white", "orange"),
+  area(col = 18:19) ~ color_tile("white", "red")
+))
+
+
+```
+
+
+
+```{r test, include=TRUE}
+table
+
+```
+
+
+
+
