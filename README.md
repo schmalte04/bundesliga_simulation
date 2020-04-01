@@ -1,5 +1,6 @@
-Bundesliga Simulation
+Bundesliga Simulation :bar\_chart:
 ================
+Malte (<malte.schmielewski@goal-analytics.com>)
 4/1/2020
 
 ### Simulation of the remaining Bundesliga matches and the final table
