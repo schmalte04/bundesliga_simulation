@@ -1,16 +1,18 @@
-Bundesliga Simulation anhand von Monte Carlo
+Bundesliga Simulation
 ================
-Malte Schmielewski
 4/1/2020
 
-## Simulation der Bundesliga ab dem 26. Spieltag
+### Simulation der Bundesliga ab dem 26. Spieltag
 
 Dieses Sheet sammelt und visualisiert die Ergebnisse der Simulation der
 Bundesliga.
 
-### Methodikgit
+### Methodik
 
-asdasd asdasdsda
+loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum
+loremipsumloremipsumloremipsumloremipsum loremipsumloremipsum
+loremipsumloremipsum
+loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum
 
 ### Titel Rennen Visualisiert
 
