@@ -8,7 +8,7 @@ Malte Schmielewski
 Dieses Sheet sammelt und visualisiert die Ergebnisse der Simulation der
 Bundesliga.
 
-### Methodik
+### Methodikgit
 
 asdasd asdasdsda
 
