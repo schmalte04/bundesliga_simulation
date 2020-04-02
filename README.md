@@ -22,7 +22,7 @@ probabilities based on different distributions and simulated the outcome
 
 ### Bundesliga Title Race
 
-![](gganim.gif)
+![](gganim_2.gif)
 
 ### Ligatebellen Matrix
 
