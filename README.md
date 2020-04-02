@@ -13,6 +13,13 @@ likely be either second or thrid place. Bayern München, RB Leipzig,
 Borussia Dortmund and Bayer Leverkusen have the highest chance to
 qualify for the Champions League.
 
+### Key Messages
+
+  - Bayern has the highest probability to win the league <br/>
+  - Champions League places: Bayern, Dortmund, RB Leipzig, Leverkusen
+    <br/>
+  - Paderborn has only a 10% chance to not get directly relegated
+
 ### Methods
 
 There are 9 matchdays remaining in the Bundesliga which means there are
@@ -24,6 +31,6 @@ probabilities based on different distributions and simulated the outcome
 
 ![](gganim.gif)
 
-### Ligatebellen Matrix
+### Leaguetable Results after 20.000 Monte-Carlo Simulations
 
 ![](Liga_Matrix.png)
