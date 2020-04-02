@@ -15,10 +15,12 @@ qualify for the Champions League.
 
 ### Methods
 
-Here i will describe the method how the simulation was made - Monte
-Carlo (5000 Runs) - Distributions
+There are 9 matchdays remaining in the Bundesliga which means there are
+81 matches to be played in total. We calculated for each match
+probabilities based on different distributions and simulated the outcome
+20.000 times. This simulations led us to the most likely end table.
 
-### Titel Rennen Visualisiert
+### Bundesliga Title Race
 
 ![](gganim.gif)
 
