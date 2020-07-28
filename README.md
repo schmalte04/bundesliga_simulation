@@ -1,4 +1,4 @@
-Bundesliga Simulation :bar\_chart:
+Bundesliga Simulation :bar\_chart: during the 2020 COVID-19 Break
 ================
 Malte (<malte.schmielewski@goal-analytics.com>)
 4/1/2020
