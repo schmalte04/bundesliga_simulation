@@ -40,7 +40,7 @@ https://www.sport.es/es/noticias/barca/simulacion-laliga-barcelona-campeon-espan
 
 ### Bundesliga Title Race
 
-![](gganim.gif)
+![](gganim.gif =250x)
 
 ### Leaguetable Results after 20.000 Monte-Carlo Simulations
 
