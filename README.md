@@ -44,4 +44,4 @@ https://www.sport.es/es/noticias/barca/simulacion-laliga-barcelona-campeon-espan
 
 ### Leaguetable Results after 20.000 Monte-Carlo Simulations
 
-<img src="Liga_Matrix.png" width="300">
+<img src="Liga_Matrix.png" width="500">
